@@ -7,6 +7,7 @@ sources:
       - name: countryregion
       - name: creditcard
       - name: customer
+      - name: person
       - name: product
       - name: salesorderdetail
       - name: salesorderheader
