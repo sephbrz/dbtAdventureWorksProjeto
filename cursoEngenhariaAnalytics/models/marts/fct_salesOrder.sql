@@ -54,7 +54,6 @@ with
             SalesOrderDateKey,
             SalesOrderDueDateKey,
             SalesOrderShipDateKey,
-            SalesOrderAccountNumber,
             OrderQty,
             UnitPrice,
             (OrderQty * UnitPrice) as TotalPrice

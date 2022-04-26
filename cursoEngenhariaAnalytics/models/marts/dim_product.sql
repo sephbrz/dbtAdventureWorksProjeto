@@ -8,10 +8,7 @@ with
             row_number() over (order by ProductID) as sk_product, --chave auto-incremental
             ProductID,            
             ProductName,
-            ProductNumber,
-            ProductLine,
-            ProductClass,
-            ProductStyle,
+            ProductNumber
 
         from staging
 )

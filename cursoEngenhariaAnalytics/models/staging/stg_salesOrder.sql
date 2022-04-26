@@ -7,7 +7,7 @@ with
             --SD.SpecialOfferID AS SpecialOfferKey,
             --SH.[Status] AS SalesOrderStatus,
             --SH.OnlineOrderFlag AS SalesOnlineOrderFlag,
-            SH.AccountNumber AS SalesOrderAccountNumber,
+            --SH.AccountNumber AS SalesOrderAccountNumber,
             SH.CustomerID,-- AS SalesOrderCustomerKey,
             SH.CreditCardID,
             --coalesce (SH.SalesPersonID,0) AS SalesPersonKey,
