@@ -1,0 +1,18 @@
+version: 2
+
+models: 
+    - name: fct_salesorderheadersalesreason
+      description: "This is the Fact table that relates the sales order with its sales reason, it can have a n-n relation"
+      columns:
+          - name: salesreasonid
+            description: "Part of primary key for this fact and foreigh key to salesreason table"
+            tests:
+                - not_null
+
+          - name: sk_salesreason
+            description: "Surrogate key from salesreason dimension, to be used on fact-dimension relationship"
+            tests:
+                - not_null              
+              
+          - name: salesorderid,
+            description: "Part of primary key for this fact and foreigh key to salesreason table"                          

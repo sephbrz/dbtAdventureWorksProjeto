@@ -10,7 +10,7 @@ models:
                 - unique
                 - not_null
 
-          - name: customer_sk   
+          - name: sk_customer  
             description: "Surrogate key for this dimension"
             tests:
                 - unique

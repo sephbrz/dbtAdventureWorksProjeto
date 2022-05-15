@@ -10,7 +10,7 @@ models:
                 - unique
                 - not_null
 
-          - name: address_SK   
+          - name: sk_address   
             description: "Surrogate key for this dimension"
             tests:
                 - unique

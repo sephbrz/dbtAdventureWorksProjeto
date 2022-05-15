@@ -10,7 +10,7 @@ models:
                 - unique
                 - not_null
 
-          - name: product_SK  
+          - name: sk_product
             description: "Surrogate key for this dimension"
             tests:
                 - unique

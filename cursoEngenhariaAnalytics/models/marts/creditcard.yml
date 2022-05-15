@@ -10,7 +10,7 @@ models:
                 - unique
                 - not_null
 
-          - name: creditcard_sk   
+          - name: sk_creditcard  
             description: "Surrogate key for this dimension"
             tests:
                 - unique

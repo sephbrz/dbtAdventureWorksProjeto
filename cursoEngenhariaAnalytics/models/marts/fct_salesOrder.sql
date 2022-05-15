@@ -27,14 +27,12 @@ with
     , salesOrders_with_sk as (
         select
             o.*,
-            billtoaddress.sk_address as sk_billtoaddress,
             shiptoaddress.sk_address as sk_shiptoaddress,
             cc.sk_creditcard,
             c.sk_customer,
             p.sk_product      
 
         from {{ref('stg_salesOrder')}} o
-        left join addresses billtoaddress on o.billtoaddressid = billtoaddress.addressid
         left join addresses shiptoaddress on o.shiptoaddressid = shiptoaddress.addressid
         left join creditcards cc on o.creditcardid = cc.creditcardid        
         left join products p on o.productid = p.productid
@@ -46,14 +44,11 @@ with
         select
             SalesOrderID,
             SalesOrderDetailID, 
-            sk_BillToAddress,
             sk_ShipToAddress,           
             sk_Customer,
             sk_CreditCard,
             sk_Product,
             SalesOrderDateKey,
-            SalesOrderDueDateKey,
-            SalesOrderShipDateKey,
             OrderQty,
             UnitPrice,
             (OrderQty * UnitPrice) as TotalPrice

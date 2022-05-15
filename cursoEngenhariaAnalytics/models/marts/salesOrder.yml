@@ -1,0 +1,40 @@
+version: 2
+
+models: 
+    - name: fct_salesOrder
+      description: "This is the Sales Order Fact Table"
+      columns:
+          - name: salesorderid
+            description: "Primary key for order table, identifier of purchase order"
+            tests:
+                - not_null            
+
+          - name: salesorderdetailid
+            description: "Primary key for order detail (order line/suborder) table"
+            tests:
+                - unique
+                - not_null            
+                        
+          - name: sk_product  
+            description: "Surrogate key for dimension of Product"
+            
+          - name: sk_customer  
+            description: "Surrogate key for dimension of Customer"
+
+          - name: sk_creditcard  
+            description: "Surrogate key for dimension of Credit Card"
+
+          - name: sk_ShipToAddress
+            description: "Surrogate key for address dimension, to get shipping address info"           
+
+          - name: SalesOrderDateKey
+            description: "Order date key for date dimension"
+
+          - name: unitprice
+            description: "Unit Price of the product from order detail"
+          
+          - name: OrderQty
+            description: "Quantity of units ordered"
+
+          - name: TotalPrice
+            description: "Total price of the order line (order detail), calculated as unit price X orderQty"

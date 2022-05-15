@@ -78,12 +78,10 @@ sources:
           - name: salesreasonid
             description: Field that is part of primary key of the salesorderheadersalesreason table
             tests:
-              - unique
               - not_null
           - name: SalesOrderID
             description: Field that is part of primary key of the salesorderheadersalesreason table
             tests:
-              - unique
               - not_null              
 
       - name: salesreason
