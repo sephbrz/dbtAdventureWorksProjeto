@@ -7,11 +7,11 @@ with
             --c.territoryid, 
             --p.persontype, 
             --p.namestyle, 
-            p.title, 
+            --p.title, 
             p.firstname, 
             p.middlename, 
             p.lastname, 
-            p.suffix, 
+            --p.suffix, 
             --p.emailpromotion,
             --p.additionalcontactinfo, 
             --p.demographics

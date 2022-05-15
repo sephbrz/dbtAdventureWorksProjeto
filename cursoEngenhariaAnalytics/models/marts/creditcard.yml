@@ -1,0 +1,30 @@
+version: 2
+
+models:
+    - name: dim_creditcard
+      description: "This is the Dimension of Credit Cards"
+      columns:
+          - name: creditcardid
+            description: "Primary key for this dimension"
+            tests:
+                - unique
+                - not_null
+
+          - name: creditcard_sk   
+            description: "Surrogate key for this dimension"
+            tests:
+                - unique
+                - not_null             
+          
+          - name: cardtype
+            description: "Credit Card type"
+            
+          - name: cardnumber
+            description: "Credit Card number"
+           
+          - name: expmonth
+            description: "Credit Card expiration month"
+            
+          - name: expyear
+            description: "Credit Card expiration year"  
+                             

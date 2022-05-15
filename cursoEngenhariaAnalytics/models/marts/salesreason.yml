@@ -1,0 +1,23 @@
+version: 2
+
+models: 
+    - name: dim_salesreason
+      description: "This is the Dimension of Sales Reason"
+      columns:
+          - name: salesreasonid
+            description: "Primary key for this dimension"
+            tests:
+                - unique
+                - not_null
+
+          - name: salesreason_SK  
+            description: "Surrogate key for this dimension"
+            tests:
+                - unique
+                - not_null              
+              
+          - name: reasontype
+            description: "Reason Type"              
+                      
+          - name: reasonname
+            description: "Reason Name"

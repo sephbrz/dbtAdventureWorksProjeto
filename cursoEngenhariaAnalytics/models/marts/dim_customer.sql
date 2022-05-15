@@ -7,15 +7,13 @@ with
         select
             row_number() over (order by customerid) as sk_customer, --chave auto-incremental
             customerid,
-            concat(firstname," ",lastname," - ",customerid) as UniqueFullName,
-            personid, 
-            title, 
+            concat(firstname," ",middlename," ",lastname," - ",customerid) as UniqueFullName,
+            personid,  
             firstname, 
             middlename, 
-            lastname, 
-            suffix
+            lastname
 
         from staging
 )
 
-select *  from transformed
+select * from transformed

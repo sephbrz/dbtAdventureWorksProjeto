@@ -1,0 +1,35 @@
+version: 2
+
+models:
+    - name: dim_customer
+      description: "This is the Dimension of Customer"
+      columns:
+          - name: customerid
+            description: "Primary key for table customer"
+            tests:
+                - unique
+                - not_null
+
+          - name: customer_sk   
+            description: "Surrogate key for this dimension"
+            tests:
+                - unique
+                - not_null  
+                
+          - name: personid   
+            description: "Foreign key for table person.person"  
+          
+          - name: fistname 
+            description: "Customer firt name" 
+
+          - name: middlename 
+            description: "Customer middle name" 
+          
+          - name: lastname 
+            description: "Customer last name"    
+
+          - name: UniqueFullName 
+            description: "Calculated field that concatenates customer's first, middle and last names with its customerId, in order to create a unique field with customer name" 
+
+            
+ 

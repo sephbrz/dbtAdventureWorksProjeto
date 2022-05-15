@@ -1,0 +1,44 @@
+version: 2
+
+models:
+    - name: dim_address
+      description: "This is the Dimension of Address"
+      columns:
+          - name: addressid
+            description: "Primary key for this dimension"
+            tests:
+                - unique
+                - not_null
+
+          - name: address_SK   
+            description: "Surrogate key for this dimension"
+            tests:
+                - unique
+                - not_null  
+          
+          - name: addressline1
+            description: "Address line 1"
+            
+          - name: addressline2
+            description: "Address line 2"
+           
+          - name: city
+            description: "Address City"
+            
+          - name: postalcode
+            description: "Address Postal Code"  
+
+          - name: spatiallocation
+            description: "Address Spatial Location"  
+            
+          - name: stateprovincecode
+            description: "State Province Code"    
+          
+          - name: stateprovincename
+            description: "Province name"  
+          
+          - name: CountryRegionCode
+            description: "Country code"  
+
+          - name: CountryRegionName
+            description: "Country name" 

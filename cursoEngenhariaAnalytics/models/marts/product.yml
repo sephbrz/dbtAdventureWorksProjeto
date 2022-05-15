@@ -1,0 +1,23 @@
+version: 2
+
+models: 
+    - name: dim_product
+      description: "This is the Dimension of Products"
+      columns:
+          - name: productid
+            description: "Primary key for this dimension"
+            tests:
+                - unique
+                - not_null
+
+          - name: product_SK  
+            description: "Surrogate key for this dimension"
+            tests:
+                - unique
+                - not_null    
+                
+          - name: name
+            description: "Product name"              
+          
+          - name: productnumber
+            description: "Product number"              
