@@ -2,15 +2,15 @@ with
     source_data as (
         select
             a.addressId,
-            cast(format_date("%Y%m%d",a.ModifiedDate) as integer) AS ModifiedDateKey,
+            --cast(format_date("%Y%m%d",a.ModifiedDate) as integer) AS ModifiedDateKey,
              --sp.territoryId as TerritoryKey,
             a.addressline1,
             a.addressline2,
             a.city,
             a.postalcode,
-            a.spatiallocation,
+            --a.spatiallocation,
             sp.stateprovincecode,
-            sp.isonlystateprovinceflag,
+            --sp.isonlystateprovinceflag,
             sp.name as stateProvinceName,
             cr.countryregioncode,
             cr.name as CountryRegionName

@@ -2,8 +2,8 @@ with
     source_data as (
         SELECT
             P.ProductID,
-            P.Name AS ProductName,
-            P.ProductNumber,
+            ,P.Name AS ProductName
+            --P.ProductNumber,
             --P.MakeFlag,
             --P.FinishedGoodsFlag,
             --P.Color AS Color,

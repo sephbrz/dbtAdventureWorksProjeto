@@ -26,10 +26,7 @@ models:
             description: "Address City"
             
           - name: postalcode
-            description: "Address Postal Code"  
-
-          - name: spatiallocation
-            description: "Address Spatial Location"  
+            description: "Address Postal Code"   
             
           - name: stateprovincecode
             description: "State Province Code"    
